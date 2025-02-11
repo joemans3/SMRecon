@@ -14,7 +14,7 @@ A Python package for creating Gaussian reconstructions of single molecule micros
 ## Installation
 
 ```bash
-pip install smrecon  # Package name placeholder
+pip install smrecon
 ```
 
 ## Quick Start
