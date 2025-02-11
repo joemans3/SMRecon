@@ -1,0 +1,29 @@
+[project]
+name = "smrecon"
+dynamic = ["version"]
+description = "Single Molecule Reconstructions"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.2.1",
+    "pandas>=2.2.3",
+    "scikit-image>=0.25.1",
+    "scipy>=1.15.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+ignore = ["."]
+[tool.hatch.build.targets.wheel]
+packages = ["src/smrecon"]
+
+[dependency-groups]
+dev = ["pytest>=8.3.4"]
+
+[tool.hatch.version]
+path = "src/smrecon/__init__.py"
