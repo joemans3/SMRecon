@@ -1,6 +1,6 @@
 # Single Molecule Reconstruction Package
 
-A Python package for creating scale-space reconstructions of single molecule microscopy data, with support for masked regions and uniform distribution modeling.
+A Python package for creating Gaussian reconstructions of single molecule microscopy data, with support for masked regions and uniform distribution modeling.
 
 ## Features
 
