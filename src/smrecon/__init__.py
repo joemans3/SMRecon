@@ -8,7 +8,7 @@ Author: Baljyot Singh Parmar
 Last updated: 2025-02-11
 """
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 
 from .main import (
