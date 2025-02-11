@@ -131,7 +131,7 @@ masked_image = masked_reconstructor.make_reconstruction(
     uniform=False  # Set to True for uniform distribution within mask
 )
 
-xycoord, spatialcoord = masked_image.coordinate_conversion([x_i, y_i], r_i)
+xycoord, spatialcoord = masked_image.coordinate_conversion([x_i, y_i], r_i, conversion_type)
 # x_i, y_i are the spacial coordinates and are affected by bounding box and rescaling
 # r_i is a distance and only affected by rescaling.
 # first argument is always a spatial coordinate and second is always distance.
@@ -140,6 +140,15 @@ xycoord, spatialcoord = masked_image.coordinate_conversion([x_i, y_i], r_i)
 Coordinate conversion types:
 - RC_TO_ORIGINAL # recon -> original space
 - ORIGINAL_TO_RC # original -> recon space
+
+conversion_type takes values of an enum:
+```python
+class ConversionType(str, Enum):
+    """Types of coordinate conversion."""
+
+    RC_TO_ORIGINAL = "RC_to_Original"
+    ORIGINAL_TO_RC = "Original_to_RC"
+```
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
