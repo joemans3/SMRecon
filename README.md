@@ -71,7 +71,7 @@ masked_image = masked_reconstructor.make_reconstruction(
     localizations=localizations,
     localization_error=errors,
     masked_img=your_mask_array,
-    uniform=False  # Set to True for uniform distribution within mask, number of localizations will be placed in the mask region uniformly.
+    uniform=False  # Set to True for random within mask, number of localizations will be placed in the mask region uniformly.
 )
 ```
 
